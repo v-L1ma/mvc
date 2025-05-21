@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Transações</title>
+    <link rel="stylesheet" th:href="@{css/main.css}">
+</head>
+<body>
+<h1>Lista de transações</h1>
+<ul>
+    <li th:each="transacoes:${transacoes}">
+        <p th:text="${transacoes.id}"></p>
+        <p th:text="${transacoes.type}"></p>
+        <p th:text="${transacoes.receiverName}"></p>
+        <p th:text="${transacoes.date}"></p>
+        <p th:text="${transacoes.value}"></p>
+    </li>
+</ul>
+</body>
+</html>
